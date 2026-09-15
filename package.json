@@ -4,8 +4,8 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "dev": "bun run agent.js"
-  },
+  "dev": "bun run agent.js",
+  "start": "bun run server.js"},
   "devDependencies": {
     "@types/bun": "latest"
   },
