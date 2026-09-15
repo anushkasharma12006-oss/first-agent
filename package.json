@@ -1,0 +1,20 @@
+{
+  "name": "first-agent",
+  "module": "agent.js",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "bun run agent.js"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "groq-sdk": "^1.6.0",
+    "mysql2": "^3.24.4"
+  }
+}

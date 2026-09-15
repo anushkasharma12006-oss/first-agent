@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>First-Agent</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- ================================
+             SIDEBAR
+        ================================= -->
+
+        <aside class="sidebar">
+
+            <!-- Sidebar open / close -->
+            <button
+                class="sidebar-toggle"
+                id="sidebarToggle"
+                type="button"
+                aria-label="Toggle sidebar"
+            >
+                «
+            </button>
+
+
+            <!-- Logo -->
+            <div class="logo-text">
+
+                <div class="logo-mark">
+                    $
+                </div>
+
+                <div class="logo-content">
+                    <h1>first-agent</h1>
+                    <p>your financial assistant</p>
+                </div>
+
+            </div>
+
+
+            <!-- Navigation -->
+            <nav class="navigation">
+
+                <!-- New Chat -->
+                <a
+                    href="new.html"
+                    class="nav-item"
+                >
+                    <span class="nav-icon">⌂</span>
+                    <span>New Chat</span>
+                </a>
+
+
+                <!-- Home -->
+                <a
+                    href="main.html"
+                    class="nav-item active"
+                >
+                    <span class="nav-icon">⌂</span>
+                    <span>Home</span>
+                </a>
+
+
+                <!-- Your Spendings -->
+                <a
+                    href="spendings.html"
+                    class="nav-item"
+                >
+                    <span class="nav-icon">💰</span>
+                    <span>Your Spendings</span>
+                </a>
+
+
+                <!-- Settings -->
+                <a
+                    href="settings.html"
+                    class="nav-item"
+                >
+                    <span class="nav-icon">⚙</span>
+                    <span>Settings</span>
+                </a>
+
+
+                <!-- Help -->
+                <a
+                    href="help.html"
+                    class="nav-item"
+                >
+                    <span class="nav-icon">?</span>
+                    <span>Help</span>
+                </a>
+
+            </nav>
+
+
+            <!-- Empty space -->
+            <div class="sidebar-spacer"></div>
+
+
+            <!-- Bottom navigation -->
+            <div class="bottom-navigation">
+
+                <!-- Login -->
+                <a
+                    href="login.html"
+                    class="user-profile login-link"
+                >
+                    <div class="user-avatar">
+                        ⇥
+                    </div>
+
+                    <div class="user-info">
+                        <strong>Login</strong>
+                        <span>Sign in to your account</span>
+                    </div>
+
+                    <span class="user-arrow">›</span>
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- ================================
+             MAIN CONTENT
+        ================================= -->
+
+        <main class="main-content">
+
+            <!-- Top bar -->
+            <header class="top-bar">
+
+                <div class="top-actions">
+
+                    <button
+                        class="icon-button"
+                        type="button"
+                        aria-label="Theme"
+                    >
+                        ◐
+                    </button>
+
+                    <button
+                        class="model-button"
+                        type="button"
+                    >
+                        <span class="status-dot"></span>
+                        First-Agent
+                    </button>
+
+                </div>
+
+            </header>
+
+
+            <!-- ================================
+                 WELCOME
+            ================================= -->
+
+            <section class="welcome-section">
+
+                <div class="welcome-icon">
+                    $
+                </div>
+
+                <h1>
+                    Welcome to First-Agent
+                </h1>
+
+                <p>
+                    Your own financial assistant
+                </p>
+
+            </section>
+
+
+            <!-- ================================
+                 SERVICES
+            ================================= -->
+
+            <section class="services">
+
+                <!-- Calculator -->
+                <article class="service-card">
+
+                    <div>
+
+                        <div class="card-icon calculator-icon">
+                            🧮
+                        </div>
+
+                        <h3>
+                            Your Calculator
+                        </h3>
+
+                        <p>
+                            Calculate your financial needs quickly and easily.
+                        </p>
+
+                    </div>
+
+                    <a href="project 1 calculator/index.html">
+                        Open Calculator →
+                    </a>
+
+                </article>
+
+
+                <!-- Spendings -->
+                <article class="service-card">
+
+                    <div>
+
+                        <div class="card-icon spending-icon">
+                            💰
+                        </div>
+
+                        <h3>
+                            Your Spendings
+                        </h3>
+
+                        <p>
+                            Track and manage your expenses in one place.
+                        </p>
+
+                    </div>
+
+                    <a href="spendings.html">
+                        View Spendings →
+                    </a>
+
+                </article>
+
+            </section>
+
+
+            <!-- ================================
+                 CHAT SECTION
+            ================================= -->
+
+            <section class="chat-section">
+
+                <!-- Chat messages -->
+                <div
+                    class="chat-messages"
+                    id="chatMessages"
+                >
+
+                    <!-- Initial Josh message -->
+                    <div class="chat-message ai-message">
+
+                        <div class="message-name">
+                            Josh
+                        </div>
+
+                        <div class="message-text">
+                            Hi! I'm Josh 👋<br>
+                            I'm your personal financial assistant.
+                            Ask me about your expenses, income or balance.
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Message box -->
+                <div class="message-box">
+
+                    <textarea
+                        id="messageInput"
+                        placeholder="Message First-Agent..."
+                        rows="1"
+                    ></textarea>
+
+
+                    <div class="message-actions">
+
+                        <!-- Attach button -->
+                        <button
+                            class="message-action"
+                            type="button"
+                            aria-label="Attach file"
+                        >
+                            +
+                        </button>
+
+
+                        <!-- Send button -->
+                        <button
+                            class="send-button"
+                            type="button"
+                            id="sendButton"
+                            aria-label="Send message"
+                        >
+                            ↑
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <p class="chat-tip">
+                    First-Agent can help you with your financial tasks.
+                </p>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- Main website JavaScript -->
+    <script src="style.js"></script>
+
+
+    <!-- ================================
+         AI CHAT JAVASCRIPT
+    ================================= -->
+
+    <script>
+
+        const messageInput =
+            document.getElementById("messageInput");
+
+        const sendButton =
+            document.getElementById("sendButton");
+
+        const chatMessages =
+            document.getElementById("chatMessages");
+
+
+        async function sendMessage() {
+
+            const question =
+                messageInput.value.trim();
+
+
+            // Don't send empty messages
+            if (!question) {
+                return;
+            }
+
+
+            // Get logged-in user's ID
+            const userId =
+                localStorage.getItem("userId");
+
+
+            // User must be logged in
+            if (!userId) {
+
+                const loginMessage =
+                    document.createElement("div");
+
+                loginMessage.className =
+                    "chat-message ai-message";
+
+                const name =
+                    document.createElement("div");
+
+                name.className =
+                    "message-name";
+
+                name.textContent =
+                    "Josh";
+
+
+                const text =
+                    document.createElement("div");
+
+                text.className =
+                    "message-text";
+
+                text.textContent =
+                    "Please login first so I can access your financial data.";
+
+
+                loginMessage.appendChild(name);
+                loginMessage.appendChild(text);
+
+                chatMessages.appendChild(loginMessage);
+
+                chatMessages.scrollTop =
+                    chatMessages.scrollHeight;
+
+                return;
+            }
+
+
+            // =========================
+            // USER MESSAGE
+            // =========================
+
+            const userMessage =
+                document.createElement("div");
+
+            userMessage.className =
+                "chat-message user-message";
+
+
+            const userText =
+                document.createElement("div");
+
+            userText.className =
+                "message-text";
+
+            userText.textContent =
+                question;
+
+
+            userMessage.appendChild(userText);
+
+            chatMessages.appendChild(userMessage);
+
+
+            // Clear input
+            messageInput.value = "";
+
+
+            // =========================
+            // JOSH THINKING MESSAGE
+            // =========================
+
+            const thinkingMessage =
+                document.createElement("div");
+
+            thinkingMessage.className =
+                "chat-message ai-message";
+
+
+            const thinkingName =
+                document.createElement("div");
+
+            thinkingName.className =
+                "message-name";
+
+            thinkingName.textContent =
+                "Josh";
+
+
+            const thinkingText =
+                document.createElement("div");
+
+            thinkingText.className =
+                "message-text";
+
+            thinkingText.textContent =
+                "Josh is thinking...";
+
+
+            thinkingMessage.appendChild(thinkingName);
+
+            thinkingMessage.appendChild(thinkingText);
+
+            chatMessages.appendChild(thinkingMessage);
+
+
+            // Scroll down
+            chatMessages.scrollTop =
+                chatMessages.scrollHeight;
+
+
+            // =========================
+            // SEND TO BACKEND
+            // =========================
+
+            try {
+
+                const response =
+                    await fetch(
+                        "http://localhost:3000/ask-ai",
+                        {
+                            method: "POST",
+
+                            headers: {
+                                "Content-Type": "application/json"
+                            },
+
+                            body: JSON.stringify({
+                                question: question,
+                                userId: userId
+                            })
+                        }
+                    );
+
+
+                const data =
+                    await response.json();
+
+
+                // =========================
+                // ERROR RESPONSE
+                // =========================
+
+                if (!response.ok) {
+
+                    thinkingText.textContent =
+                        data.message ||
+                        "Something went wrong.";
+
+                    return;
+                }
+
+
+                // =========================
+                // JOSH RESPONSE
+                // =========================
+
+                thinkingText.textContent =
+                    data.answer ||
+                    "Sorry, I couldn't understand that.";
+
+
+                // Scroll to latest message
+                chatMessages.scrollTop =
+                    chatMessages.scrollHeight;
+
+
+            } catch (error) {
+
+                console.error(
+                    "AI error:",
+                    error
+                );
+
+
+                thinkingText.textContent =
+                    "Sorry, I couldn't connect to Josh right now.";
+
+            }
+
+        }
+
+
+        // ================================
+        // SEND BUTTON
+        // ================================
+
+        sendButton.addEventListener(
+            "click",
+            sendMessage
+        );
+
+
+        // ================================
+        // ENTER TO SEND
+        // ================================
+
+        messageInput.addEventListener(
+            "keydown",
+            function (event) {
+
+                if (
+                    event.key === "Enter" &&
+                    !event.shiftKey
+                ) {
+
+                    event.preventDefault();
+
+                    sendMessage();
+
+                }
+
+            }
+        );
+
+    </script>
+
+</body>
+
+</html>
+   

@@ -1,0 +1,289 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Agents - First-Agent</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Main App -->
+    <div class="app">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <!-- Logo -->
+            <div class="logo-text">
+                <h1>$</h1>
+                <h2>first-agent</h2>
+                <p>Your financial assistant</p>
+            </div>
+
+            <!-- New Chat -->
+            <button class="new-chat">
+                + New Chat
+            </button>
+
+            <!-- Navigation -->
+            <nav class="navigation">
+
+                <a href="index.html">Home</a>
+
+                <a href="agents.html">Agents</a>
+
+                <a href="yourspending.html">Your Spendings</a>
+
+                <a href="history.html">History</a>
+
+                <a href="settings.html">Settings</a>
+
+                <a href="help.html">Help</a>
+
+            </nav>
+
+        </aside>
+
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <!-- Page Header -->
+            <header class="page-header">
+                <h1>AI Agents</h1>
+                <p>Choose an assistant for your financial needs.</p>
+            </header>
+
+
+            <!-- Agents Container -->
+            <section class="agents-container">
+
+
+                <!-- Financial Assistant -->
+                <article class="agent-card">
+
+                    <div class="agent-icon">
+                        $
+                    </div>
+
+                    <div class="agent-info">
+
+                        <h2>Financial Assistant</h2>
+
+                        <p>
+                            Ask questions about your money,
+                            expenses and financial decisions.
+                        </p>
+
+                       <button class="agent-button" onclick="startFinancialChat()">
+    Start Chat
+</button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Spending Analyzer -->
+                <article class="agent-card">
+
+                    <div class="agent-icon">
+                        📊
+                    </div>
+
+                    <div class="agent-info">
+
+                        <h2>Spending Analyzer</h2>
+
+                        <p>
+                            Understand your spending habits
+                            and find where your money goes.
+                        </p>
+
+                        <button class="agent-button">
+                            Analyze Spending
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Budget Assistant -->
+                <article class="agent-card">
+
+                    <div class="agent-icon">
+                        💰
+                    </div>
+
+                    <div class="agent-info">
+
+                        <h2>Budget Assistant</h2>
+
+                        <p>
+                            Create and manage a budget
+                            according to your financial goals.
+                        </p>
+
+                        <button class="agent-button">
+                            Create Budget
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Savings Assistant -->
+                <article class="agent-card">
+
+                    <div class="agent-icon">
+                        💡
+                    </div>
+
+                    <div class="agent-info">
+
+                        <h2>Savings Assistant</h2>
+
+                        <p>
+                            Get ideas and guidance for
+                            building better saving habits.
+                        </p>
+
+                        <button class="agent-button">
+                            Start Planning
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+            </section>
+                        <!-- AI Chat -->
+            <section class="ai-chat">
+
+                <div class="chat-header">
+                    <h2>Financial Assistant</h2>
+                    <p>Ask Josh about your money</p>
+                </div>
+
+                <div id="chatMessages" class="chat-messages">
+
+                    <div class="ai-message">
+                        Hi! I'm Josh 👋<br>
+                        Ask me about your expenses, income or balance.
+                    </div>
+
+                </div>
+
+                <div class="chat-input">
+
+                    <input
+                        type="text"
+                        id="userQuestion"
+                        placeholder="Ask something about your money..."
+                    >
+
+                    <button onclick="sendMessage()">
+                        Send
+                    </button>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+    <script src="style.js"></script>
+    <script>
+
+async function sendMessage() {
+
+    const input = document.getElementById("userQuestion");
+    const chatMessages = document.getElementById("chatMessages");
+
+    const question = input.value.trim();
+
+    if (!question) {
+        return;
+    }
+
+    // Show user's message
+    const userMessage = document.createElement("div");
+
+    userMessage.className = "user-message";
+    userMessage.textContent = question;
+
+    chatMessages.appendChild(userMessage);
+
+    // Clear input
+    input.value = "";
+
+    // Show thinking message
+    const thinkingMessage = document.createElement("div");
+
+    thinkingMessage.className = "ai-message";
+    thinkingMessage.textContent = "Josh is thinking...";
+
+    chatMessages.appendChild(thinkingMessage);
+
+    try {
+
+        const response = await fetch(
+            "http://localhost:3000/ask-ai",
+            {
+                method: "POST",
+
+                headers: {
+                    "Content-Type": "application/json"
+                },
+
+            body: JSON.stringify({
+    question: question,
+    userId: localStorage.getItem("userId")
+})
+            }
+        );
+
+        const data = await response.json();
+
+        // Replace thinking message with AI answer
+        thinkingMessage.textContent =
+            data.answer || "Sorry, I couldn't understand that.";
+
+    } catch (error) {
+
+        console.error("AI error:", error);
+
+        thinkingMessage.textContent =
+            "Sorry, something went wrong.";
+
+    }
+
+    // Scroll to latest message
+    chatMessages.scrollTop =
+        chatMessages.scrollHeight;
+
+}
+
+</script>
+    <script>
+
+function startFinancialChat() {
+
+    alert("Financial Assistant is ready!");
+
+}
+
+</script>
+
+</body>
+</html>
+

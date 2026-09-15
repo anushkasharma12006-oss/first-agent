@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - First-Agent</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #0b0f1a;
+            color: #f4f5f8;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .login-container {
+            width: 100%;
+            max-width: 420px;
+            padding: 20px;
+        }
+
+        .login-card {
+            background: #101522;
+            border: 1px solid #2a354c;
+            border-radius: 18px;
+            padding: 35px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+        }
+
+        .logo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .logo-mark {
+            width: 55px;
+            height: 55px;
+            border-radius: 15px;
+
+            background: #7657ff;
+            color: white;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 25px;
+            font-weight: bold;
+
+            margin-bottom: 14px;
+        }
+
+        .logo h1 {
+            font-size: 24px;
+            margin-bottom: 6px;
+        }
+
+        .logo p {
+            color: #8993a7;
+            font-size: 12px;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 7px;
+
+            color: #c5cbd8;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .form-group input {
+            width: 100%;
+            height: 45px;
+
+            padding: 0 13px;
+
+            background: #171f30;
+            border: 1px solid #2a354c;
+            border-radius: 9px;
+
+            outline: none;
+
+            color: #f4f5f8;
+            font-size: 13px;
+
+            transition: 0.2s ease;
+        }
+
+        .form-group input::placeholder {
+            color: #8993a7;
+        }
+
+        .form-group input:focus {
+            border-color: #7657ff;
+            box-shadow: 0 0 0 3px rgba(118, 87, 255, 0.12);
+        }
+
+        .login-button {
+            width: 100%;
+            height: 45px;
+
+            margin-top: 5px;
+
+            border: none;
+            border-radius: 9px;
+
+            background: #7657ff;
+            color: white;
+
+            font-size: 13px;
+            font-weight: 600;
+
+            cursor: pointer;
+
+            transition: 0.2s ease;
+        }
+
+        .login-button:hover {
+            background: #9a7cff;
+            transform: translateY(-1px);
+        }
+
+        .login-button:active {
+            transform: translateY(0);
+        }
+
+        .forgot-password {
+            display: block;
+
+            text-align: right;
+
+            margin-top: 9px;
+
+            color: #9a7cff;
+            font-size: 11px;
+
+            text-decoration: none;
+        }
+
+        .forgot-password:hover {
+            color: white;
+        }
+
+        .divider {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+            margin: 25px 0;
+
+            color: #8993a7;
+            font-size: 11px;
+        }
+
+        .divider::before,
+        .divider::after {
+            content: "";
+            flex: 1;
+
+            height: 1px;
+
+            background: #2a354c;
+        }
+
+        .signup-text {
+            text-align: center;
+
+            color: #8993a7;
+            font-size: 12px;
+        }
+
+        .signup-text a {
+            color: #9a7cff;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .signup-text a:hover {
+            color: white;
+        }
+
+        .back-link {
+            display: block;
+
+            text-align: center;
+
+            margin-top: 20px;
+
+            color: #8993a7;
+            font-size: 11px;
+
+            text-decoration: none;
+        }
+
+        .back-link:hover {
+            color: white;
+        }
+
+        @media (max-width: 480px) {
+            .login-card {
+                padding: 28px 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="login-container">
+
+        <div class="login-card">
+
+            <div class="logo">
+                <div class="logo-mark">$</div>
+
+                <h1>First-Agent</h1>
+
+                <p>Your AI Task. Done.</p>
+            </div>
+
+ 
+<form id="loginForm">
+
+    <div class="form-group">
+        <label for="email">Email</label>
+
+        <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+        >
+    </div>
+
+    <div class="form-group">
+        <label for="password">Password</label>
+
+        <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Enter your password"
+            required
+        >
+    </div>
+
+    <a href="#" class="forgot-password">Forgot password?</a>
+
+    <button type="submit" class="login-button">
+        Login
+    </button>
+
+</form> 
+
+
+            <div class="divider">
+                <span>OR</span>
+            </div>
+
+
+             <p class="signup-text">
+               Don't have an account?
+            <a href="register.html">Create account</a>
+             </p>
+
+
+            <a href="main.html" class="back-link">
+                ← Back to First-Agent
+            </a>
+
+        </div>
+
+    </div>
+<script src="style.js"></script>
+<script src="login.js"></script>
+</body>
+</html>

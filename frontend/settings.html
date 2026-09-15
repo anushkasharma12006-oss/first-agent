@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Settings - First-Agent</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- ========================================
+             SIDEBAR
+        ========================================= -->
+
+        <aside class="sidebar">
+
+            <button
+                class="sidebar-toggle"
+                id="sidebarToggle"
+                type="button"
+                aria-label="Toggle sidebar"
+            >
+                «
+            </button>
+
+
+            <!-- Logo -->
+
+            <div class="logo-text">
+
+                <div class="logo-mark">
+                    $
+                </div>
+
+                <div class="logo-content">
+
+                    <h1>first-agent</h1>
+
+                    <p>
+                        your financial assistant
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Navigation -->
+
+            <nav class="navigation">
+
+                <a
+                    href="new.html"
+                    class="new-chat"
+                >
+                    <span class="nav-icon">+</span>
+                    <span>New Chat</span>
+                </a>
+
+
+                <a
+                    href="main.html"
+                    class="nav-item"
+                >
+                    <span class="nav-icon">⌂</span>
+                    <span>Home</span>
+                </a>
+
+
+                <a
+                    href="agents.html"
+                    class="nav-item"
+                >
+                    <span class="nav-icon">✦</span>
+                    <span>Agents</span>
+                </a>
+
+
+                <a
+                    href="spendings.html"
+                    class="nav-item"
+                >
+                    <span class="nav-icon">💰</span>
+                    <span>Your Spendings</span>
+                </a>
+
+
+                <a
+                    href="history.html"
+                    class="nav-item"
+                >
+                    <span class="nav-icon">◷</span>
+                    <span>History</span>
+                </a>
+
+
+                <a
+                    href="settings.html"
+                    class="nav-item active"
+                >
+                    <span class="nav-icon">⚙</span>
+                    <span>Settings</span>
+                </a>
+
+
+                <a
+                    href="help.html"
+                    class="nav-item"
+                >
+                    <span class="nav-icon">?</span>
+                    <span>Help</span>
+                </a>
+
+            </nav>
+
+
+            <div class="sidebar-spacer"></div>
+
+
+            <!-- Login -->
+
+            <div class="bottom-navigation">
+
+                <a
+                    href="login.html"
+                    class="user-profile"
+                >
+
+                    <div class="user-avatar">
+                        ⇥
+                    </div>
+
+                    <div class="user-info">
+
+                        <strong>
+                            Login
+                        </strong>
+
+                        <span>
+                            Sign in to your account
+                        </span>
+
+                    </div>
+
+                    <span class="user-arrow">
+                        ›
+                    </span>
+
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- ========================================
+             MAIN CONTENT
+        ========================================= -->
+
+        <main class="main-content">
+
+
+            <!-- Top Bar -->
+
+            <header class="top-bar">
+
+                <div class="top-actions">
+
+                    <button
+                        class="icon-button"
+                        type="button"
+                        aria-label="Theme"
+                    >
+                        ◐
+                    </button>
+
+                    <button
+                        class="model-button"
+                        type="button"
+                    >
+                        <span class="status-dot"></span>
+                        First-Agent
+                    </button>
+
+                </div>
+
+            </header>
+
+
+            <!-- ========================================
+                 SETTINGS
+            ========================================= -->
+
+            <section class="page-content settings-page">
+
+
+                <!-- Header -->
+
+                <div class="page-header">
+
+                    <h1>
+                        Settings
+                    </h1>
+
+                    <p>
+                        Manage your First-Agent preferences and account.
+                    </p>
+
+                </div>
+
+
+                <!-- ========================================
+                     ACCOUNT
+                ========================================= -->
+
+                <section class="settings-section">
+
+                    <div class="settings-section-header">
+
+                        <div class="settings-section-icon">
+                            ◉
+                        </div>
+
+                        <div>
+
+                            <h2>
+                                Account
+                            </h2>
+
+                            <p>
+                                Manage your profile and account preferences.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="settings-card-list">
+
+
+                        <div class="setting-card">
+
+                            <div class="setting-card-icon">
+                                ◉
+                            </div>
+
+                            <div class="setting-info">
+
+                                <h3>
+                                    Profile
+                                </h3>
+
+                                <p>
+                                    Manage your personal information and profile details.
+                                </p>
+
+                            </div>
+
+                            <button
+                                class="settings-button"
+                                type="button"
+                            >
+                                Edit
+                            </button>
+
+                        </div>
+
+
+                        <div class="setting-card">
+
+                            <div class="setting-card-icon">
+                                ⚙
+                            </div>
+
+                            <div class="setting-info">
+
+                                <h3>
+                                    Account Preferences
+                                </h3>
+
+                                <p>
+                                    Manage general preferences for your First-Agent account.
+                                </p>
+
+                            </div>
+
+                            <button
+                                class="settings-button"
+                                type="button"
+                            >
+                                Manage
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- ========================================
+                     FINANCIAL PREFERENCES
+                ========================================= -->
+
+                <section class="settings-section">
+
+                    <div class="settings-section-header">
+
+                        <div class="settings-section-icon">
+                            ₹
+                        </div>
+
+                        <div>
+
+                            <h2>
+                                Financial Preferences
+                            </h2>
+
+                            <p>
+                                Customize how First-Agent handles your financial information.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="settings-card-list">
+
+
+                        <div class="setting-card">
+
+                            <div class="setting-card-icon">
+                                ₹
+                            </div>
+
+                            <div class="setting-info">
+
+                                <h3>
+                                    Monthly Budget
+                                </h3>
+
+                                <p>
+                                    Set a monthly spending limit to keep your expenses organized.
+                                </p>
+
+                            </div>
+
+                            <button
+                                class="settings-button"
+                                type="button"
+                            >
+                                Set Budget
+                            </button>
+
+                        </div>
+
+
+                        <div class="setting-card">
+
+                            <div class="setting-card-icon">
+                                ₹
+                            </div>
+
+                            <div class="setting-info">
+
+                                <h3>
+                                    Currency
+                                </h3>
+
+                                <p>
+                                    Choose the currency used for your spending records.
+                                </p>
+
+                            </div>
+
+                            <button
+                                class="settings-button"
+                                type="button"
+                            >
+                                INR (₹)
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- ========================================
+                     APPEARANCE
+                ========================================= -->
+
+                <section class="settings-section">
+
+                    <div class="settings-section-header">
+
+                        <div class="settings-section-icon">
+                            ◐
+                        </div>
+
+                        <div>
+
+                            <h2>
+                                Appearance
+                            </h2>
+
+                            <p>
+                                Customize how First-Agent looks and feels.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="settings-card-list">
+
+                        <div class="setting-card">
+
+                            <div class="setting-card-icon">
+                                ◐
+                            </div>
+
+                            <div class="setting-info">
+
+                                <h3>
+                                    Theme
+                                </h3>
+
+                                <p>
+                                    Choose between dark and light appearance.
+                                </p>
+
+                            </div>
+
+                            <select class="theme-select">
+
+                                <option value="dark">
+                                    Dark
+                                </option>
+
+                                <option value="light">
+                                    Light
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- ========================================
+                     NOTIFICATIONS
+                ========================================= -->
+
+                <section class="settings-section">
+
+                    <div class="settings-section-header">
+
+                        <div class="settings-section-icon">
+                            ♢
+                        </div>
+
+                        <div>
+
+                            <h2>
+                                Notifications
+                            </h2>
+
+                            <p>
+                                Control alerts related to your financial activity.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="settings-card-list">
+
+
+                        <div class="setting-card">
+
+                            <div class="setting-card-icon">
+                                !
+                            </div>
+
+                            <div class="setting-info">
+
+                                <h3>
+                                    Spending Alerts
+                                </h3>
+
+                                <p>
+                                    Get notified about your spending activity.
+                                </p>
+
+                            </div>
+
+                            <label class="switch">
+
+                                <input
+                                    type="checkbox"
+                                    class="notification-toggle"
+                                >
+
+                                <span class="slider"></span>
+
+                            </label>
+
+                        </div>
+
+
+                        <div class="setting-card">
+
+                            <div class="setting-card-icon">
+                                !
+                            </div>
+
+                            <div class="setting-info">
+
+                                <h3>
+                                    Budget Alerts
+                                </h3>
+
+                                <p>
+                                    Get notified when you are getting close to your budget.
+                                </p>
+
+                            </div>
+
+                            <label class="switch">
+
+                                <input
+                                    type="checkbox"
+                                    class="notification-toggle"
+                                >
+
+                                <span class="slider"></span>
+
+                            </label>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- ========================================
+                     PRIVACY
+                ========================================= -->
+
+                <section class="settings-section">
+
+                    <div class="settings-section-header">
+
+                        <div class="settings-section-icon">
+                            ◇
+                        </div>
+
+                        <div>
+
+                            <h2>
+                                Privacy & Data
+                            </h2>
+
+                            <p>
+                                Manage your conversations and stored information.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="settings-card-list">
+
+                        <div class="setting-card">
+
+                            <div class="setting-card-icon">
+                                ◇
+                            </div>
+
+                            <div class="setting-info">
+
+                                <h3>
+                                    Conversation History
+                                </h3>
+
+                                <p>
+                                    Manage your saved conversations and previous activity.
+                                </p>
+
+                            </div>
+
+                            <button
+                                class="settings-button"
+                                type="button"
+                            >
+                                Manage
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <script src="style.js"></script>
+
+</body>
+
+</html>
