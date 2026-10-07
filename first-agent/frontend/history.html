@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>History - First-Agent</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- ========================================
+             SIDEBAR
+        ========================================= -->
+
+        <aside class="sidebar">
+
+            <button
+                class="sidebar-toggle"
+                id="sidebarToggle"
+                type="button"
+                aria-label="Toggle sidebar"
+            >
+                «
+            </button>
+
+
+            <!-- Logo -->
+
+            <div class="logo-text">
+
+                <div class="logo-mark">
+                    $
+                </div>
+
+                <div class="logo-content">
+
+                    <h1>first-agent</h1>
+
+                    <p>
+                        your financial assistant
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Navigation -->
+
+            <nav class="navigation">
+
+                <a
+                    href="new.html"
+                    class="new-chat"
+                >
+                    <span class="nav-icon">+</span>
+                    <span>New Chat</span>
+                </a>
+
+
+                <a
+                    href="main.html"
+                    class="nav-item"
+                >
+                    <span class="nav-icon">⌂</span>
+                    <span>Home</span>
+                </a>
+
+
+                <a
+                    href="agents.html"
+                    class="nav-item"
+                >
+                    <span class="nav-icon">✦</span>
+                    <span>Agents</span>
+                </a>
+
+
+                <a
+                    href="spendings.html"
+                    class="nav-item"
+                >
+                    <span class="nav-icon">💰</span>
+                    <span>Your Spendings</span>
+                </a>
+
+
+                <a
+                    href="history.html"
+                    class="nav-item active"
+                >
+                    <span class="nav-icon">◷</span>
+                    <span>History</span>
+                </a>
+
+
+                <a
+                    href="settings.html"
+                    class="nav-item"
+                >
+                    <span class="nav-icon">⚙</span>
+                    <span>Settings</span>
+                </a>
+
+
+                <a
+                    href="help.html"
+                    class="nav-item"
+                >
+                    <span class="nav-icon">?</span>
+                    <span>Help</span>
+                </a>
+
+            </nav>
+
+
+            <div class="sidebar-spacer"></div>
+
+
+            <!-- Login -->
+
+            <div class="bottom-navigation">
+
+                <a
+                    href="login.html"
+                    class="user-profile"
+                >
+
+                    <div class="user-avatar">
+                        ⇥
+                    </div>
+
+                    <div class="user-info">
+
+                        <strong>
+                            Login
+                        </strong>
+
+                        <span>
+                            Sign in to your account
+                        </span>
+
+                    </div>
+
+                    <span class="user-arrow">
+                        ›
+                    </span>
+
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- ========================================
+             MAIN CONTENT
+        ========================================= -->
+
+        <main class="main-content">
+
+
+            <!-- Top Bar -->
+
+            <header class="top-bar">
+
+                <div class="top-actions">
+
+                    <button
+                        class="icon-button"
+                        type="button"
+                        aria-label="Theme"
+                    >
+                        ◐
+                    </button>
+
+                    <button
+                        class="model-button"
+                        type="button"
+                    >
+                        <span class="status-dot"></span>
+                        First-Agent
+                    </button>
+
+                </div>
+
+            </header>
+
+
+            <!-- ========================================
+                 HISTORY PAGE
+            ========================================= -->
+
+            <section class="page-content history-page">
+
+
+                <!-- Page Header -->
+
+                <div class="page-header">
+
+                    <h1>
+                        History
+                    </h1>
+
+                    <p>
+                        View and manage your previous conversations.
+                    </p>
+
+                </div>
+
+
+                <!-- ========================================
+                     SEARCH
+                ========================================= -->
+
+                <div class="history-toolbar">
+
+                    <div class="history-search">
+
+                        <span class="search-icon">
+                            ⌕
+                        </span>
+
+                        <input
+                            type="text"
+                            id="historySearch"
+                            placeholder="Search conversations..."
+                        >
+
+                    </div>
+
+                    <button
+                        class="history-filter"
+                        type="button"
+                    >
+                        All
+                        <span>⌄</span>
+                    </button>
+
+                </div>
+
+
+                <!-- ========================================
+                     TODAY
+                ========================================= -->
+
+                <section class="history-section">
+
+                    <div class="history-section-title">
+                        Today
+                    </div>
+
+
+                    <div
+                        class="history-list"
+                        id="historyList"
+                    >
+
+                        <div class="history-empty">
+
+                            <div class="history-empty-icon">
+                                ◷
+                            </div>
+
+                            <h2>
+                                No conversations yet
+                            </h2>
+
+                            <p>
+                                Your recent conversations will appear here.
+                            </p>
+
+                            <a
+                                href="new.html"
+                                class="history-new-button"
+                            >
+                                + Start a New Chat
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- ========================================
+                     PREVIOUS
+                ========================================= -->
+
+                <section class="history-section">
+
+                    <div class="history-section-title">
+                        Previous
+                    </div>
+
+
+                    <div class="history-info-card">
+
+                        <div class="history-info-icon">
+                            ✦
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Your conversations will be saved here
+                            </h3>
+
+                            <p>
+                                Start a chat with First-Agent and your conversation
+                                history will appear on this page.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- Frontend JS -->
+
+    <script src="style.js"></script>
+
+</body>
+
+</html>

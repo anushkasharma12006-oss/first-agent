@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>New Chat - First-Agent</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- ================================
+             SIDEBAR
+        ================================= -->
+
+        <aside class="sidebar">
+
+            <button
+                class="sidebar-toggle"
+                id="sidebarToggle"
+                type="button"
+                aria-label="Toggle sidebar"
+            >
+                «
+            </button>
+
+
+            <!-- Logo -->
+
+            <div class="logo-text">
+
+                <div class="logo-mark">
+                    $
+                </div>
+
+                <div class="logo-content">
+                    <h1>first-agent</h1>
+                    <p>your financial assistant</p>
+                </div>
+
+            </div>
+
+
+            <!-- Navigation -->
+
+            <nav class="navigation">
+
+                <!-- New Chat -->
+
+                <a
+                    href="new.html"
+                    class="new-chat"
+                >
+                    <span class="nav-icon">+</span>
+                    <span>New Chat</span>
+                </a>
+
+
+                <!-- Home -->
+
+                <a
+                    href="main.html"
+                    class="nav-item"
+                >
+                    <span class="nav-icon">⌂</span>
+                    <span>Home</span>
+                </a>
+
+
+                <!-- Spendings -->
+
+                <a
+                    href="spendings.html"
+                    class="nav-item"
+                >
+                    <span class="nav-icon">💰</span>
+                    <span>Your Spendings</span>
+                </a>
+
+
+                <!-- Settings -->
+
+                <a
+                    href="settings.html"
+                    class="nav-item"
+                >
+                    <span class="nav-icon">⚙</span>
+                    <span>Settings</span>
+                </a>
+
+
+                <!-- Help -->
+
+                <a
+                    href="help.html"
+                    class="nav-item"
+                >
+                    <span class="nav-icon">?</span>
+                    <span>Help</span>
+                </a>
+
+            </nav>
+
+
+            <div class="sidebar-spacer"></div>
+
+
+            <!-- Login -->
+
+            <div class="bottom-navigation">
+
+                <a
+                    href="login.html"
+                    class="user-profile"
+                >
+                    <div class="user-avatar">
+                        ⇥
+                    </div>
+
+                    <div class="user-info">
+                        <strong>Login</strong>
+                        <span>Sign in to your account</span>
+                    </div>
+
+                    <span class="user-arrow">›</span>
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- ================================
+             MAIN CONTENT
+        ================================= -->
+
+        <main class="main-content">
+
+            <!-- Top bar -->
+
+            <header class="top-bar">
+
+                <div class="top-actions">
+
+                    <button
+                        class="icon-button"
+                        type="button"
+                    >
+                        ◐
+                    </button>
+
+                    <button
+                        class="model-button"
+                        type="button"
+                    >
+                        <span class="status-dot"></span>
+                        First-Agent
+                    </button>
+
+                </div>
+
+            </header>
+
+
+            <!-- ================================
+                 NEW CHAT
+            ================================= -->
+
+            <section class="welcome-section">
+
+                <div class="welcome-icon">
+                    +
+                </div>
+
+                <h1>
+                    Start a New Chat
+                </h1>
+
+                <p>
+                    What can I help you with today?
+                </p>
+
+            </section>
+
+
+            <!-- ================================
+                 CHAT BOX
+            ================================= -->
+
+            <section class="chat-section">
+
+                <div class="message-box">
+
+                    <textarea
+                        id="messageInput"
+                        placeholder="Message First-Agent..."
+                        rows="1"
+                    ></textarea>
+
+
+                    <div class="message-actions">
+
+                        <button
+                            class="message-action"
+                            type="button"
+                            aria-label="Attach file"
+                        >
+                            +
+                        </button>
+
+                        <button
+                            class="send-button"
+                            type="button"
+                            id="sendButton"
+                            aria-label="Send message"
+                        >
+                            ↑
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <p class="chat-tip">
+                    First-Agent can help you with your financial tasks.
+                </p>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+
+  
+    <script src="style.js"></script>
+
+</body>
+
+</html>

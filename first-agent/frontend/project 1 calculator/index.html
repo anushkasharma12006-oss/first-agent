@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Calculator - First-Agent</title>
+
+    <!-- Main First-Agent CSS -->
+    <link rel="stylesheet" href="../style.css">
+
+    <!-- Calculator CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- ========================================
+         SIDEBAR
+    ========================================= -->
+
+    <aside class="sidebar">
+
+        <button
+            class="sidebar-toggle"
+            id="sidebarToggle"
+            type="button"
+            aria-label="Toggle sidebar"
+        >
+            «
+        </button>
+
+
+        <!-- Logo -->
+
+        <div class="logo-text">
+
+            <div class="logo-mark">$</div>
+
+            <div class="logo-content">
+                <h1>first-agent</h1>
+                <p>your financial assistant</p>
+            </div>
+
+        </div>
+
+
+        <!-- Navigation -->
+
+        <nav class="navigation">
+
+            <a
+                href="../new.html"
+                class="new-chat"
+            >
+                <span class="nav-icon">+</span>
+                <span>New Chat</span>
+            </a>
+
+
+            <a
+                href="../main.html"
+                class="nav-item"
+            >
+                <span class="nav-icon">⌂</span>
+                <span>Home</span>
+            </a>
+
+
+            <a
+                href="index.html"
+                class="nav-item active"
+            >
+                <span class="nav-icon">🧮</span>
+                <span>Your Calculator</span>
+            </a>
+
+
+            <a
+                href="../spendings.html"
+                class="nav-item"
+            >
+                <span class="nav-icon">💰</span>
+                <span>Your Spendings</span>
+            </a>
+
+
+            <a
+                href="../settings.html"
+                class="nav-item"
+            >
+                <span class="nav-icon">⚙</span>
+                <span>Settings</span>
+            </a>
+
+
+            <a
+                href="../help.html"
+                class="nav-item"
+            >
+                <span class="nav-icon">?</span>
+                <span>Help</span>
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-spacer"></div>
+
+
+        <!-- Login -->
+
+        <div class="bottom-navigation">
+
+            <a
+                href="../login.html"
+                class="user-profile login-link"
+            >
+
+                <div class="user-avatar">
+                    ⇥
+                </div>
+
+                <div class="user-info">
+
+                    <strong>Login</strong>
+
+                    <span>
+                        Sign in to your account
+                    </span>
+
+                </div>
+
+                <span class="user-arrow">
+                    ›
+                </span>
+
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ========================================
+         MAIN CONTENT
+    ========================================= -->
+
+    <main class="main-content">
+
+
+        <!-- Top Bar -->
+
+        <header class="top-bar">
+
+            <div class="top-actions">
+
+                <button
+                    class="icon-button"
+                    type="button"
+                    aria-label="Theme"
+                >
+                    ◐
+                </button>
+
+
+                <button
+                    class="model-button"
+                    type="button"
+                >
+
+                    <span class="status-dot"></span>
+
+                    First-Agent
+
+                </button>
+
+            </div>
+
+        </header>
+
+
+        <!-- Calculator Area -->
+
+        <section class="calculator-page">
+
+            <div class="calculator-header">
+
+                <div class="calculator-page-icon">
+                    🧮
+                </div>
+
+                <div>
+                    <h1>Your Calculator</h1>
+
+                    <p>
+                        Calculate your financial needs quickly and easily.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <!-- Calculator -->
+
+            <div class="calculator">
+
+                <!-- Display -->
+
+                <div class="display">
+
+                    <input
+                        type="text"
+                        id="display"
+                        value="0"
+                        readonly
+                        aria-label="Calculator display"
+                    >
+
+                </div>
+
+
+                <!-- Buttons -->
+
+                <div class="buttons">
+
+                    <button
+                        type="button"
+                        class="action"
+                        onclick="clearAll()"
+                    >
+                        AC
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="action"
+                        onclick="deleteLast()"
+                    >
+                        DEL
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="operator"
+                        onclick="append('%')"
+                    >
+                        %
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="operator"
+                        onclick="append('/')"
+                    >
+                        ÷
+                    </button>
+
+
+                    <button
+                        type="button"
+                        onclick="append('7')"
+                    >
+                        7
+                    </button>
+
+
+                    <button
+                        type="button"
+                        onclick="append('8')"
+                    >
+                        8
+                    </button>
+
+
+                    <button
+                        type="button"
+                        onclick="append('9')"
+                    >
+                        9
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="operator"
+                        onclick="append('*')"
+                    >
+                        ×
+                    </button>
+
+
+                    <button
+                        type="button"
+                        onclick="append('4')"
+                    >
+                        4
+                    </button>
+
+
+                    <button
+                        type="button"
+                        onclick="append('5')"
+                    >
+                        5
+                    </button>
+
+
+                    <button
+                        type="button"
+                        onclick="append('6')"
+                    >
+                        6
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="operator"
+                        onclick="append('-')"
+                    >
+                        −
+                    </button>
+
+
+                    <button
+                        type="button"
+                        onclick="append('1')"
+                    >
+                        1
+                    </button>
+
+
+                    <button
+                        type="button"
+                        onclick="append('2')"
+                    >
+                        2
+                    </button>
+
+
+                    <button
+                        type="button"
+                        onclick="append('3')"
+                    >
+                        3
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="operator"
+                        onclick="append('+')"
+                    >
+                        +
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="zero"
+                        onclick="append('0')"
+                    >
+                        0
+                    </button>
+
+
+                    <button
+                        type="button"
+                        onclick="append('.')"
+                    >
+                        .
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="equals"
+                        onclick="calculate()"
+                    >
+                        =
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+
+
+<!-- Calculator JS -->
+ <!-- First-Agent Frontend JS -->
+<script src="../style.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
